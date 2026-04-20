@@ -37,6 +37,8 @@
 - Do not surface domain-specific work (e.g. drug toxicology, infrastructure resilience) unless directly relevant to the role
 - Do not use content from commented-out sections in `main_original.tex` as active bullets
 - Use domain-specific terminology only when a match or relevant information is found in the job description — do not introduce technical terms that are absent from the JD
+- Always include quantitative measures (e.g. data volume, model accuracy, latency, throughput, number of models, time saved); if the exact figure is unknown, assign a reasonable estimate — Avishek will correct in Overleaf
+- Tailor for the seniority level: mid-level roles require domain-specific technical facts and concrete metrics, not just high-level outcomes
 
 ---
 
@@ -64,6 +66,8 @@
 - 3 journal articles and 22 peer-reviewed conference papers (IPDPS, IEEE BigData, ICMLA, ISI)
 - MatGPT trained on Frontier (world's first Exascale supercomputer)
 - 8+ years of AI/ML experience (from 2018 KDD Lab); 10+ years total (from 2015 Dutch Bangla Bank)
+- Proficient in PySpark — surface for roles involving big data, distributed computing, or data engineering
+- Co-designed a graduate-level AI/ML course during PhD at Kansas State — surface for roles that emphasize knowledge sharing, communication, or technical leadership
 
 ---
 
