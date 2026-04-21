@@ -207,10 +207,10 @@
     \begin{onecolentry}
         \begin{highlights}
             \item Designed and deployed cloud-native ML infrastructure on Azure using Terraform (infrastructure-as-code), enabling automated, repeatable environment provisioning for GenAI services handling 100K+ daily requests.
-            \item Built and maintained CI/CD pipelines with Docker for automated testing, versioning, and deployment of production ML models across multiple environments.
-            \item Standardized model performance observability using RAGAs, DeepEval, and Azure Monitor, tracking quality metrics and detecting anomalies across 5+ production models.
-            \item Implemented automated data quality monitoring and retrieval consistency checks in DataOps pipelines to detect schema drift and validate outputs.
-            \item Developed reusable MLOps patterns and documentation adopted by cross-functional teams to accelerate AI feature delivery.
+            \item Built CI/CD pipelines with Docker for automated unit testing, model validation, and zero-downtime deployment of production ML models across dev, staging, and production environments.
+            \item Standardized model performance observability using RAGAs, DeepEval, and Azure Monitor, tracking retrieval precision and generation quality across 5+ production models.
+            \item Implemented automated RAG pipeline data quality checks using Azure Monitor, detecting embedding dimension mismatches and schema drift across 3+ vector indexes in production.
+            \item Standardized MLOps deployment templates and CI/CD workflows across 3 product teams, reducing new model deployment time from 2 weeks to 3 days.
         \end{highlights}
     \end{onecolentry}
 
@@ -228,7 +228,7 @@
             \item Designed enterprise ML pipelines on Azure to automate ingestion and processing of 500K+ unstructured DOE documents, with automated data validation and anomaly detection.
             \item Orchestrated large-scale distributed model training for MatGPT on Frontier (world’s first Exascale supercomputer), managing parallel workloads across thousands of compute nodes.
             \item Deployed containerized ML inference pipelines with vector databases on Azure, maintaining 24×7 high availability and $<$200ms response time under concurrent load.
-            \item Established ML governance practices including model auditability and bias assessment for AI systems deployed across DOE research workflows.
+            \item Established ML governance practices using MLflow for model versioning and lineage tracking, with automated audit logs for all model predictions and data transformations across DOE workflows.
         \end{highlights}
     \end{onecolentry}
 
@@ -243,9 +243,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built Python and PySpark-based ML data pipelines to process 10M+ social media records with automated classification and quality checks.
-            \item Developed automated generative summarization pipelines using Transformer models, processing 1K+ reports per batch with consistent, repeatable outputs.
-            \item Co-designed a graduate-level AI/ML course, producing reusable documentation, proof-of-concepts, and hands-on labs to drive team adoption of ML practices.
+            \item Built Python and PySpark NLP pipelines for cyber-threat intelligence (CTI), extracting and classifying malware, phishing, and data breach events from 10M+ Twitter posts with $\sim$85\% F1 score.
+            \item Built automated T5-based abstractive summarization pipelines for FEMA disaster situation reports, reducing analyst review time by $\sim$60\% per batch.
+            \item Co-designed a graduate-level Data Mining and Machine Learning course at Kansas State University, developing curriculum, MLOps lab exercises, and reusable Jupyter notebook templates.
         \end{highlights}
     \end{onecolentry}
 
