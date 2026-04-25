@@ -75,6 +75,7 @@
 - MatGPT trained on Frontier (world's first Exascale supercomputer)
 - 8+ years of AI/ML experience (from 2018 KDD Lab); 10+ years total (from 2015 Dutch Bangla Bank)
 - Proficient in PySpark — surface for roles involving big data, distributed computing, or data engineering
+- Proficient in Elasticsearch — surface for roles involving search systems, information retrieval, or search infrastructure
 - Co-designed a graduate-level AI/ML course during PhD at Kansas State — surface for roles that emphasize knowledge sharing, communication, or technical leadership
 
 ---

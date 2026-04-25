@@ -1,0 +1,243 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=1 cm,
+    bottom=1 cm,
+    left=1 cm,
+    right=1 cm,
+    footskip=1 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={John Doe's CV},
+    pdfauthor={John Doe},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=0 cm + 10pt]
+}{\end{itemize}}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[topsep=0.10 cm, parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{\par\kern\topsep}
+
+\newcommand{\placelastupdatedtext}{
+  \AddToShipoutPictureFG*{
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}
+  }
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Avishek Bose \\
+        \fontsize{10 pt}{10 pt}\selectfont Search Engineer
+
+        \normalsize
+        Location: Knoxville, TN, United States | Immigration status: Permanent resident (US)
+        \\
+        \mbox{\hrefWithoutArrow{mailto:avishek85.15th@gmail.com}{avishek85.15th@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{+1(785)317-6675}{(785)317-6675}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/avibose}{linkedin.com/in/avibose}}%
+        \kern 5.0 pt%
+    \end{header}
+
+    \vspace{- 0.3 cm}
+    \section{Summary}
+    Senior Python engineer with 8+ years of experience building production-grade backend services, retrieval pipelines, and LLM-powered search systems. Deep expertise in RAG architecture, vector search, embedding generation, and REST API development using Python, LangChain, and Hugging Face Transformers. Proven track record owning the full service lifecycle — from prototyping through deployment and monitoring — on cloud-native infrastructure using Docker, CI/CD, and Terraform. Strong collaborator across ML, product, and platform teams.
+
+    \vspace{-1mm}
+    \section{Work Experience}
+
+    \begin{twocolentry}{Jun 2025 -- Present}
+        \textbf{Platform Engineer}
+    \end{twocolentry}
+    \begin{twocolentry}{Knoxville, TN, USA}
+       Tegna Inc.
+    \end{twocolentry}
+
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built and deployed production Python REST API services integrating RAG pipelines, LLM-powered retrieval, and semantic search on Azure, handling 100K+ daily requests across 64 TV stations.
+            \item Designed and implemented vector search and embedding generation pipelines using dense similarity retrieval, improving retrieval precision by $\sim$35\% across 5+ production indexes.
+            \item Built search quality evaluation tooling using RAGAs and DeepEval, tracking retrieval precision, F1, and generation accuracy across production LLM services.
+            \item Containerized Python services using Docker and owned deployment lifecycle via CI/CD pipelines, with cloud infrastructure provisioned through Terraform.
+        \end{highlights}
+    \end{onecolentry}
+
+\vspace{1mm}
+
+    \begin{twocolentry}{Jan 2023 -- Jun 2025}
+        \textbf{Postdoctoral Research Associate}
+    \end{twocolentry}
+    \begin{twocolentry}{Oak Ridge, Tennessee, USA}
+        Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Designed scalable LLM inference and vector retrieval pipelines on Azure, maintaining 24×7 system availability and $<$200ms response time under concurrent production load.
+            \item Built large-scale data ingestion and preprocessing pipelines for 500K+ research documents to support LLM-powered knowledge retrieval across scientific workflows.
+            \item Trained MatGPT from scratch on Frontier (world's first Exascale supercomputer), orchestrating distributed training across 2M+ scientific documents to produce a domain-adapted retrieval model.
+            \item Collaborated with domain experts across 4+ research teams to define retrieval requirements, validate search system outputs, and iterate on relevance quality.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{1mm}
+
+    \begin{twocolentry}{Jun 2018 -- Dec 2022}
+        \textbf{Research Assistant}
+    \end{twocolentry}
+    \begin{twocolentry}{Manhattan, Kansas, USA}
+       KDD Lab, Department of Computer Science, Kansas State University
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built Python NLP retrieval and classification pipelines using NLTK, spaCy, and Apache Spark, processing 10M+ social media posts with $\sim$85\% F1 and $\sim$88\% ROC-AUC.
+            \item Developed a T5-based generative summarization service for automated batch document processing, reducing analyst review time by $\sim$60\%.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.1 cm}
+    \begin{twocolentry}{Jan 2015 -- Dec 2016}
+        \textbf{Software Engineer}
+    \end{twocolentry}
+    \begin{twocolentry}{Dhaka, Bangladesh}
+       ICT Division, Dutch Bangla Bank
+    \end{twocolentry}
+
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed SQL-based data processing and reporting pipelines handling 100K+ daily banking transactions.
+        \end{highlights}
+    \end{onecolentry}
+
+%     \section{Publications}
+%         3 journal and 22 conference papers in IPDPS, BigData, ICMLA, ISI
+% Google scholar: https://scholar.google.com/citations?user=y5ndUuMAAAAJ\&hl=en\&oi=ao
+
+\section{Education}
+
+        \begin{twocolentry}{
+            August 2017 -- Dec 2022
+        }
+            \textbf{Kansas State University}, Ph.D. in Computer Science\end{twocolentry}
+
+        \begin{twocolentry}{
+            January 2014 -- Dec 2015
+        }
+            \textbf{University of Dhaka}, M.S. in Computer Science and Engineering\end{twocolentry}
+
+        \begin{twocolentry}{
+            January 2009 -- Aug 2013
+        }
+            \textbf{University of Dhaka}, B.Sc. in Computer Science and Engineering\end{twocolentry}
+
+\vspace{-1mm}
+\section{Technical Skills}
+
+        \paragraph{Search \& Retrieval:} Elasticsearch, RAG, vector databases, embedding generation, dense similarity search, semantic search, LangChain, LlamaIndex
+        \vspace{-4mm}
+        \paragraph{Python Backend \& APIs:} Python, REST APIs, Docker, CI/CD, Terraform, MLflow
+        \vspace{-4mm}
+        \paragraph{LLM \& GenAI:} Hugging Face Transformers, LLM fine-tuning, prompt engineering, model evaluation (Precision, Recall, F1, ROC-AUC)
+        \vspace{-4mm}
+        \paragraph{Data \& ML Libraries:} Apache Spark, NLTK, spaCy, PyTorch, Scikit-learn, Pandas, NumPy
+        \vspace{-4mm}
+        \paragraph{Programming Languages:} Python, SQL, C\#
+
+\end{document}
