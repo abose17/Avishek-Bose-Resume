@@ -30,15 +30,23 @@
 
 ---
 
+## Factual Accuracy — Hard Rule
+- **Never attach a tool or technology to an experience where it was not actually used** (e.g. do not add PySpark to Tegna bullets if PySpark was not used at Tegna)
+- **Never add a skill to the skills section that Avishek has not confirmed** he knows or uses
+- **Never invent context** such as organizational details or project outcomes that have not been stated
+- **Quantitative measures (metrics and numbers) are always encouraged** — assign reasonable estimates and mark them with `$\sim$` where exact figures are unknown; Avishek reviews and corrects all numbers in Overleaf before submitting
+- Use domain-specific terminology only when matched to the JD **and** grounded in Avishek's actual background
+- **Avishek always does a final edit in Overleaf before submitting** — the goal is to produce a strong first draft that makes his editing job easier, not a perfect final product
+
 ## Experience Bullets
 - Write simple, coherent, easy-to-read bullets — one idea per bullet
 - Split compound bullets joined by semicolons into separate bullets
 - Only include skills and experience relevant to the specific role
 - Do not surface domain-specific work (e.g. drug toxicology, infrastructure resilience) unless directly relevant to the role
 - Do not use content from commented-out sections in `main_original.tex` as active bullets
-- Use domain-specific terminology only when a match or relevant information is found in the job description — do not introduce technical terms that are absent from the JD
-- Always include quantitative measures (e.g. data volume, model accuracy, latency, throughput, number of models, time saved); if the exact figure is unknown, assign a reasonable estimate — Avishek will correct in Overleaf
 - Tailor for the seniority level: mid-level roles require domain-specific technical facts and concrete metrics, not just high-level outcomes
+- **Never pattern-match or copy bullets from previous tailored resumes.** Every resume is written fresh from `main_original.tex` and the JD alone
+- **Every bullet must be technically precise.** Before writing a bullet, verify that the tools named actually perform the function described (e.g. Docker and Terraform are not CI/CD tools; they are containerization and IaC tools respectively). Never group unrelated tools under an inaccurate umbrella term
 
 ---
 
@@ -72,9 +80,14 @@
 ---
 
 ## Git Workflow
-- Claude commits each tailored `.tex` file to the local repo
-- Avishek pushes from his terminal:
+- Claude commits each tailored `.tex` file via a temp clone (workspace repo has lock files held by Windsurf)
+- Avishek pushes from his terminal using the full sequence every time:
   ```bash
+  git stash
+  git pull github main --rebase
+  git stash pop
+  git add <filename>.tex
+  git commit -m "<message>"
   git push github master:main
   ```
 - Avishek syncs to Overleaf manually via Menu → Sync → Pull from GitHub
