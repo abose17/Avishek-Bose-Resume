@@ -112,14 +112,20 @@
 ---
 
 ## Git Workflow
-- Claude commits each tailored `.tex` file via a temp clone (workspace repo has lock files held by Windsurf)
-- Avishek pushes from his terminal using the full sequence every time:
-  ```bash
-  git stash
-  git pull github main --rebase
-  git stash pop
-  git add <filename>.tex
-  git commit -m "<message>"
-  git push github master:main
-  ```
-- Avishek syncs to Overleaf manually via Menu → Sync → Pull from GitHub
+
+**Writing a file and committing it are a single atomic step. Claude must `git add` and `git commit` immediately after writing or modifying any `.tex`, `.md`, or policy file — never end a task without a commit.**
+
+```bash
+git add <filename(s)>
+git commit -m "<description>"
+```
+
+After committing, tell Avishek to push from his terminal:
+```bash
+cd /Users/abose1/69df216bc598c596402998e7
+rm -f .git/HEAD.lock .git/REBASE_HEAD.lock
+git push github master:main
+git push origin master
+```
+
+Avishek syncs to Overleaf manually via Menu → Sync → Pull from GitHub.
