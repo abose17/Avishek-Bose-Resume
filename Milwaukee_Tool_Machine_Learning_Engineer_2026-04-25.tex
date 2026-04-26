@@ -206,8 +206,8 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Deployed a production deep learning inference platform serving 100K+ daily requests — integrated Transformer-based embedding and classification models with Azure Functions for real-time similarity scoring and content ranking.
-            \item Applied INT8 quantization and dynamic batching to Transformer inference, reducing average model serving latency from $\sim$250ms to $\sim$90ms while maintaining accuracy above target thresholds on held-out evaluation sets.
+            \item Built and deployed production REST API services integrating RAG pipelines, LLM-powered retrieval, and semantic search on Azure, handling 100K+ daily requests across 64 TV stations.
+            \item Designed and implemented vector search and embedding generation pipelines using dense similarity retrieval, improving retrieval precision by $\sim$35\% across 5+ production indexes.
             \item Tracked 5+ deployed model versions with automated evaluation pipelines (RAGAs, DeepEval), detecting quality regressions before release and enabling data-driven model update decisions.
             \item Maintained reproducible MLOps workflows using Docker, Terraform, and CI/CD — versioned model artifacts, automated test suites on each push, and infrastructure-as-code for zero-downtime deployments.
         \end{highlights}
@@ -219,14 +219,14 @@
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
     \begin{twocolentry}{Oak Ridge, Tennessee, USA}
-        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+        Critical Infrastructure Resilience group, Oak Ridge National Laboratory (ORNL)
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
             \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) using LoRA on 50K+ DOE and ORNL incident reports, achieving $\sim$15\% improvement in domain-specific classification F1 over zero-shot baselines.
             \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 2M+ materials science documents — designed distributed training configuration, data preprocessing pipelines, and downstream evaluation protocols.
-            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, and 1D CNN architectures to molecular time-series features for drug toxicology prediction tasks.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, outperformed by F1 25\%.
             \item Deployed containerized ML inference services on Azure with $<$100ms response time and 24$\times$7 availability, maintained via MLflow for experiment tracking and model registry.
         \end{highlights}
     \end{onecolentry}
@@ -244,7 +244,7 @@
         \begin{highlights}
             \item Developed GNN-based models to predict job execution status and resource utilization from HPC cluster telemetry — trained on $\sim$500K job records, achieving $\sim$89\% classification accuracy across execution outcome categories.
             \item Built BERT-based and Scikit-learn classifiers to extract and classify cyber-threat events from 10M+ social media posts, iterating on feature engineering and threshold tuning to optimize precision--recall tradeoff.
-            \item Designed a T5-based abstractive summarization pipeline for disaster incident reports, processing 1K+ reports per batch to generate structured situational summaries.
+            \item Built a T5-based summarization system for disaster incidents, processed 100K+ reports to generate situational summaries.
         \end{highlights}
     \end{onecolentry}
 
@@ -324,9 +324,9 @@
 
         \paragraph{Deep Learning Frameworks:} PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric, Scikit-learn
         \vspace{-4mm}
-        \paragraph{Model Architectures:} Transformers (BERT, LLaMA, GPT), CNNs (1D/2D), Graph Neural Networks (GCN, GraphSAGE), sequence-to-sequence models
+        \paragraph{Model Architectures:} Transformers (BERT, LLaMA, GPT), CNNs, Graph Neural Networks, sequence-to-sequence models
         \vspace{-4mm}
-        \paragraph{Model Optimization:} Quantization (INT8, dynamic), distillation, LoRA/PEFT fine-tuning, model pruning, batched inference
+        \paragraph{Model Optimization:} Quantization, distillation, LoRA/PEFT fine-tuning, model pruning, batched inference
         \vspace{-4mm}
         \paragraph{MLOps \& Cloud:} Azure, Docker, Terraform, MLflow, CI/CD, model registry, experiment tracking
         \vspace{-4mm}
