@@ -50,7 +50,7 @@ After displaying the GitHub push command, Claude must generate a skills match ta
 | 1 | e.g. RAG | Exact | LlamaIndex-based RAG platform at Tegna, 100K+ daily requests |
 | 2 | e.g. Kubernetes | Relevant | Docker + Terraform containerization and IaC (no direct K8s, but orchestration-adjacent) |
 
-This table is for Avishek's reference only — it is not part of the resume file.
+**Print this table directly in the chat response. Do not save it to any file.**
 
 ## Overleaf sync (alternative to git)
 
