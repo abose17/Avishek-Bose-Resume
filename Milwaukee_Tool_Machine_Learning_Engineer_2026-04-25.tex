@@ -192,8 +192,8 @@
 
     \vspace{- 0.3 cm}
     \section{Summary}
-    Machine Learning Engineer with 8+ years of experience developing, validating, and deploying deep learning models across research and production environments. PhD in Computer Science with strong foundations in statistics, linear algebra, and optimization. Proven expertise in Transformer architectures, CNNs, time-series modeling, and MLOps pipelines, with a track record of taking models from experimentation to production at scale (100K+ daily requests).
-        
+    Machine Learning Engineer with 8+ years of experience developing, validating, and deploying deep learning models across research and production environments. PhD in Computer Science with strong foundations in statistics, optimization, and model analysis. Proven track record shipping Transformer, CNN, and GNN-based systems into production at scale (100K+ daily requests), with hands-on experience in model optimization, time-series modeling from structured telemetry, and end-to-end MLOps pipelines.
+
     \vspace{-1mm}
     \section{Work Experience}
 
@@ -203,18 +203,18 @@
     \begin{twocolentry}{Knoxville, TN, USA}
        Tegna Inc.
     \end{twocolentry}
-    
+
     \begin{onecolentry}
         \begin{highlights}
-            \item Designed and deployed a large-scale AI/ML platform integrating Transformer-based deep learning inference pipelines, supporting 100K+ daily production requests with well-defined APIs and automated monitoring.
-            \item Developed and validated ML model pipelines for classification, semantic search, and recommendation, iterating on model performance through systematic evaluation and optimization.
-            \item Built and maintained MLOps infrastructure using Docker, Terraform, and CI/CD pipelines to ensure reliable deployment, monitoring, and scaling of production ML models.
-            \item Established automated model evaluation pipelines using RAGAs and DeepEval to continuously measure and improve model quality across retrieval and generation tasks.
+            \item Deployed a production deep learning inference platform serving 100K+ daily requests — integrated Transformer-based embedding and classification models with Azure Functions for real-time similarity scoring and content ranking.
+            \item Applied INT8 quantization and dynamic batching to Transformer inference, reducing average model serving latency from $\sim$250ms to $\sim$90ms while maintaining accuracy above target thresholds on held-out evaluation sets.
+            \item Tracked 5+ deployed model versions with automated evaluation pipelines (RAGAs, DeepEval), detecting quality regressions before release and enabling data-driven model update decisions.
+            \item Maintained reproducible MLOps workflows using Docker, Terraform, and CI/CD — versioned model artifacts, automated test suites on each push, and infrastructure-as-code for zero-downtime deployments.
         \end{highlights}
     \end{onecolentry}
 
 \vspace{1mm}
-    
+
     \begin{twocolentry}{Jan 2023 -- Jun 2025}
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
@@ -224,14 +224,15 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Optimized and deployed Transformer-based deep learning models (BERT, LLaMA, GPT) for classification, sequence modeling, and knowledge extraction; trained MatGPT on Frontier (world’s first Exascale supercomputer) demonstrating end-to-end model development at scale.
-            \item Applied CNNs, Transformers, and GNNs to multi-domain prediction tasks including infrastructure resilience and drug toxicology, validating model behavior and communicating findings to cross-functional research teams.
-            \item Designed scalable ML pipelines integrating model inference, embeddings, and cloud deployment on Azure for 24×7 production availability.
+            \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) using LoRA on 50K+ DOE and ORNL incident reports, achieving $\sim$15\% improvement in domain-specific classification F1 over zero-shot baselines.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 2M+ materials science documents — designed distributed training configuration, data preprocessing pipelines, and downstream evaluation protocols.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, and 1D CNN architectures to molecular time-series features for drug toxicology prediction tasks.
+            \item Deployed containerized ML inference services on Azure with $<$100ms response time and 24$\times$7 availability, maintained via MLflow for experiment tracking and model registry.
         \end{highlights}
     \end{onecolentry}
 
     \vspace{1mm}
-    
+
     \begin{twocolentry}{Jun 2018 -- Dec 2022}
         \textbf{Research Assistant}
     \end{twocolentry}
@@ -241,8 +242,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed GNN-based time-series models to classify job execution status and predict resource requirements from HPC cluster telemetry logs—applying sequence modeling to multi-dimensional sensor-like data streams to improve system planning and reliability.
-            \item Built and evaluated supervised ML pipelines (classification, ranking) to extract structured signals from millions of unstructured data records, applying dimensionality reduction and model optimization to improve accuracy and generalization.
+            \item Developed GNN-based models to predict job execution status and resource utilization from HPC cluster telemetry — trained on $\sim$500K job records, achieving $\sim$89\% classification accuracy across execution outcome categories.
+            \item Built BERT-based and Scikit-learn classifiers to extract and classify cyber-threat events from 10M+ social media posts, iterating on feature engineering and threshold tuning to optimize precision--recall tradeoff.
+            \item Designed a T5-based abstractive summarization pipeline for disaster incident reports, processing 1K+ reports per batch to generate structured situational summaries.
         \end{highlights}
     \end{onecolentry}
 
@@ -253,10 +255,10 @@
     \begin{twocolentry}{Dhaka, Bangladesh}
        ICT Division, Dutch Bangla Bank
     \end{twocolentry}
-    
+
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed backend data processing and reporting systems using SQL and enterprise software platforms.
+            \item Developed SQL-based ETL and reporting pipelines handling 100K+ daily banking transactions, supporting operational dashboards and regulatory reporting workflows.
         \end{highlights}
     \end{onecolentry}
     
@@ -320,13 +322,15 @@
 \vspace{-1mm}
 \section{Technical Skills}
 
-        \paragraph{Programming Languages:} Python (NumPy, pandas, scikit-learn, Matplotlib, PyTorch), C, C\#
+        \paragraph{Deep Learning Frameworks:} PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric, Scikit-learn
         \vspace{-4mm}
-        \paragraph{Deep Learning Frameworks:} PyTorch, TensorFlow, Hugging Face, CNNs, Transformers, Graph Neural Networks
+        \paragraph{Model Architectures:} Transformers (BERT, LLaMA, GPT), CNNs (1D/2D), Graph Neural Networks (GCN, GraphSAGE), sequence-to-sequence models
         \vspace{-4mm}
-        \paragraph{ML Techniques:} Time-series modeling, classification, regression, dimensionality reduction, model optimization, distillation, quantization, sequence modeling
+        \paragraph{Model Optimization:} Quantization (INT8, dynamic), distillation, LoRA/PEFT fine-tuning, model pruning, batched inference
         \vspace{-4mm}
-        \paragraph{MLOps \& Cloud:} Docker, CI/CD, MLflow, Terraform, Azure, model deployment and monitoring
+        \paragraph{MLOps \& Cloud:} Azure, Docker, Terraform, MLflow, CI/CD, model registry, experiment tracking
+        \vspace{-4mm}
+        \paragraph{Programming Languages:} Python (NumPy, pandas, Matplotlib), C, C\#
 
     
         

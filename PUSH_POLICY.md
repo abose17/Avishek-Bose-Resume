@@ -34,14 +34,6 @@ Run `git status` and look for:
 | `REBASE_HEAD.lock` after a crash | `rm -f .git/REBASE_HEAD.lock` |
 | Diverged branches on both remotes | Run the pull+push for each remote separately |
 
-## Resume tailoring checklist
-
-Every tailored resume should include quantitative measures in the bullets. Before pushing, verify:
-
-- [ ] At least one count or scale metric per job (100K+ requests, 3 domains, millions of records, etc.)
-- [ ] Key facts always present: 100K+ daily requests (Tegna), MatGPT on Frontier (ORNL), 8+ years in summary
-- [ ] Publications count (3 journals, 22 papers) surfaced in summary or Publications section when the role values research
-
 ## Overleaf sync (alternative to git)
 
 If git pushes keep failing, you can always sync manually:

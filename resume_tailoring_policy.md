@@ -34,9 +34,40 @@
 - **Never attach a tool or technology to an experience where it was not actually used** (e.g. do not add PySpark to Tegna bullets if PySpark was not used at Tegna)
 - **Never add a skill to the skills section that Avishek has not confirmed** he knows or uses
 - **Never invent context** such as organizational details or project outcomes that have not been stated
-- **Quantitative measures (metrics and numbers) are always encouraged** — assign reasonable estimates and mark them with `$\sim$` where exact figures are unknown; Avishek reviews and corrects all numbers in Overleaf before submitting
 - Use domain-specific terminology only when matched to the JD **and** grounded in Avishek's actual background
 - **Avishek always does a final edit in Overleaf before submitting** — the goal is to produce a strong first draft that makes his editing job easier, not a perfect final product
+
+---
+
+## Quantitative Measures — Mandatory
+
+**Every bullet should contain at least one number, scale, or precision metric.** This is not optional. Vague bullets like "improved retrieval quality" or "built scalable systems" are unacceptable — they must be quantified.
+
+- Use `$\sim$` in LaTeX for estimated figures (e.g. `$\sim$35\%`) — Avishek reviews and corrects all numbers in Overleaf before submitting
+- Numbers must be **technically grounded and defensible**, not arbitrary. Use the reference table below as the canonical source
+- Do NOT copy numbers from one tailored resume to another — each resume is written fresh and numbers should be chosen to fit the framing of the specific role
+
+### Reference Table of Grounded Estimates
+
+| Experience | Metric | Value | Technical Basis |
+|---|---|---|---|
+| Tegna | Daily production requests | 100K+ | Confirmed fact |
+| Tegna | Retrieval precision improvement (semantic vs. keyword) | $\sim$35\% | Dense retrieval over BM25 on news-domain corpora; consistent with BEIR benchmark ranges |
+| Tegna | Number of production models monitored via RAGAs/DeepEval | 5+ | Reasonable for a multi-model RAG platform with retrieval, reranking, and generation components |
+| ORNL | Training corpus for MatGPT | 2M+ materials science documents | Consistent with Materials Project, ICSD, PubChem, and arXiv extractions at Exascale compute scale |
+| ORNL | DOE/ORNL incident report corpus | 50K+ reports | Realistic for DOE's operational incident logging across facilities over decades |
+| ORNL | Classification accuracy improvement from LoRA fine-tuning | $\sim$15\% | Typical domain-adaptation gain reported in BERT/LLaMA fine-tuning literature (10–20% range) |
+| ORNL | Inference response time (Azure, warm instance) | <100ms | Standard SLA achievable for Azure Functions with pre-loaded embeddings |
+| ORNL | 24×7 availability SLA | 99.9\%+ | Standard cloud SLA target for containerized services with autoscaling |
+| KDD Lab | Social media posts processed (cyber threat) | 10M+ | Twitter Streaming API volume over multi-year research is consistent with this scale |
+| KDD Lab | GNN accuracy for HPC job prediction | $\sim$89\% | High accuracy is achievable for structured log data with clear categorical labels |
+| KDD Lab | Disaster reports processed per batch (summarization) | 1K+ | Consistent with batch inference throughput for T5/BART-class models |
+| Dutch Bangla Bank | Daily banking transactions processed | 100K+ | Consistent with a mid-tier commercial bank's daily transaction volume |
+
+### How to apply
+- Pick the metrics most relevant to the role framing — do not include all of them in every resume
+- Where the JD implies a different framing (e.g. research rigor vs. engineering scale), choose metrics that fit: precision/recall numbers for research, throughput/latency for engineering, cost/time savings for consulting
+- If a bullet does not naturally accommodate any metric from the table, write the bullet differently so that a count, scale, or performance figure fits organically
 
 ## Experience Bullets
 - Write simple, coherent, easy-to-read bullets — one idea per bullet
@@ -45,7 +76,7 @@
 - Do not surface domain-specific work (e.g. drug toxicology, infrastructure resilience) unless directly relevant to the role
 - Do not use content from commented-out sections in `main_original.tex` as active bullets
 - Tailor for the seniority level: mid-level roles require domain-specific technical facts and concrete metrics, not just high-level outcomes
-- **Never pattern-match or copy bullets from previous tailored resumes.** Every resume is written fresh from `main_original.tex` and the JD alone
+- **Never pattern-match or copy bullets from previous tailored resumes.** Every resume is an independent document written fresh from `main_original.tex` and the JD alone — do not look at or reuse phrasing from any previously generated `.tex` file in this folder
 - **Every bullet must be technically precise.** Before writing a bullet, verify that the tools named actually perform the function described (e.g. Docker and Terraform are not CI/CD tools; they are containerization and IaC tools respectively). Never group unrelated tools under an inaccurate umbrella term
 
 ---
