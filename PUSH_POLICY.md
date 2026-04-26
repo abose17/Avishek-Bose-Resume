@@ -34,6 +34,24 @@ Run `git status` and look for:
 | `REBASE_HEAD.lock` after a crash | `rm -f .git/REBASE_HEAD.lock` |
 | Diverged branches on both remotes | Run the pull+push for each remote separately |
 
+## Skills Match Summary (generate after every tailored resume)
+
+After displaying the GitHub push command, Claude must generate a skills match table comparing the JD requirements against Avishek's confirmed skill set. Rules:
+
+- List up to 20 terms
+- Two tiers:
+  - **Exact match** — the term appears verbatim (or near-verbatim) in both the JD and Avishek's confirmed skills/experience
+  - **Relevant match** — the JD requires a concept that Avishek covers with a closely related skill or experience (note the mapping)
+- Source Avishek's skills only from `main_original.tex` and the Key Facts in `resume_tailoring_policy.md` — do not credit skills not confirmed there
+- Format as a markdown table:
+
+| # | JD Term | Match Type | Avishek's Coverage |
+|---|---|---|---|
+| 1 | e.g. RAG | Exact | LlamaIndex-based RAG platform at Tegna, 100K+ daily requests |
+| 2 | e.g. Kubernetes | Relevant | Docker + Terraform containerization and IaC (no direct K8s, but orchestration-adjacent) |
+
+This table is for Avishek's reference only — it is not part of the resume file.
+
 ## Overleaf sync (alternative to git)
 
 If git pushes keep failing, you can always sync manually:
