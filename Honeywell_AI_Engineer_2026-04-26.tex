@@ -207,7 +207,8 @@
     \begin{onecolentry}
         \begin{highlights}
             \item Designed and deployed production AI/ML systems serving 100K+ daily requests on Azure — integrated transformer-based classification and retrieval models into existing content platform APIs, ensuring scalability and robustness.
-            \item Conducted systematic model evaluation experiments using RAGAs and DeepEval, tracking performance across 5+ deployed model versions and iterating on architecture to improve retrieval precision by $\sim$35\%.
+            \item Designed and implemented vector search and embedding generation pipelines using dense similarity retrieval, improving retrieval precision by $\sim$35\% across 5+ production indexes.
+            \item Conducted systematic model evaluation experiments using RAGAs and DeepEval, tracking performance across model versions and iterating on architecture to improve retrieval precision by $\sim$35\%.
             \item Collaborated with cross-functional engineering and product teams to integrate AI features into existing systems, managing deployment via Docker, Terraform, and CI/CD pipelines.
         \end{highlights}
     \end{onecolentry}
@@ -218,15 +219,15 @@
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
     \begin{twocolentry}{Oak Ridge, Tennessee, USA}
-        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+        Critical Infrastructure Resilience group, Oak Ridge National Laboratory (ORNL)
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Fine-tuned Transformer models (BERT, LLaMA, GPT) using LoRA on 50K+ domain-specific records — ran ablation experiments and hyperparameter sweeps to achieve $\sim$15\% improvement in classification F1 over zero-shot baselines.
-            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 2M+ scientific documents, designing distributed training configurations and evaluation protocols to measure model quality at scale.
-            \item Applied ML algorithms (Transformers, GNNs) to multi-domain prediction tasks including infrastructure resilience and drug toxicology prediction, analyzing results and refining models in collaboration with domain scientists.
-            \item Deployed ML inference services on Azure with $<$100ms response time and 99.9\%+ availability, integrating model outputs into downstream research workflows via API.
+            \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) using LoRA on 50K+ DOE and ORNL incident reports, achieving $\sim$15\% improvement in domain-specific classification F1 over zero-shot baselines.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 1M+ scientific documents of material science, designing distributed training configurations and evaluation protocols to advance material research at scale.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, outperformed by F1 25\%.
+            \item Deployed containerized ML inference services on Azure with $<$100ms response time and 99.9\%+ availability for incident forecast system, integrating model outputs into downstream workflows via API.
         \end{highlights}
     \end{onecolentry}
 
@@ -241,8 +242,11 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built and evaluated NLP and GNN-based ML models in Python (PyTorch, Scikit-learn) to classify events from 10M+ unstructured records — designed experiment pipelines, tracked metrics, and iterated on feature engineering to improve precision.
+            \item Built and evaluated NLP and GNN-based ML models in Python (PyTorch, Scikit-learn) to extract, classify, and rank cyber-threat events from from 1M+ unstructured records with $\sim$88\% F1 score and $\sim$85\% ROC-AUC — designed data pipelines using NLTK, spaCy, and Apache Spark, tracked metrics.
+            
             \item Developed GNN models to predict HPC job execution status from cluster telemetry logs, achieving $\sim$89\% classification accuracy through systematic model selection and cross-validation across $\sim$500K job records.
+            \item Built a T5-based generative summarization method on natural disaster report from FEMA; reduced processing time by $\sim$30\%.
+            
         \end{highlights}
     \end{onecolentry}
 
