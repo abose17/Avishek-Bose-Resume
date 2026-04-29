@@ -219,14 +219,15 @@
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
     \begin{twocolentry}{Oak Ridge, Tennessee, USA}
-        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+        Critical Infrastructure Resilience group, Oak Ridge National Laboratory (ORNL)
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Fine-tuned LLMs (BERT, LLaMA, GPT) using LoRA and QLoRA on 50K+ domain-specific records — designed SFT pipelines with offline evaluation protocols, achieving $\sim$15\% improvement in classification F1 over zero-shot baselines.
-            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 2M+ scientific documents — managed distributed training, designed task-specific eval harnesses, and iterated on quality metrics to validate model outputs at scale.
-            \item Deployed LLM inference services on Azure with $<$100ms response time; integrated structured model outputs and tool-callable APIs into downstream research workflows.
+            \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) using LoRA on 50K+ DOE and ORNL incident reports, achieving $\sim$15\% improvement in domain-specific classification F1 over zero-shot baselines.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 1M+ scientific documents of material science, designing distributed training configurations and evaluation protocols to advance material research at scale.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, outperformed by F1 25\%.
+            \item Deployed containerized ML inference services on Azure with $<$100ms response time and 99.9\%+ availability for incident forecast system, integrating model outputs into downstream workflows via API.
         \end{highlights}
     \end{onecolentry}
 
@@ -241,8 +242,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built modular Python NLP pipelines with version-controlled training, automated evaluation, and systematic ablation experiments to classify events from 10M+ unstructured records.
-            \item Designed a T5-based abstractive summarization pipeline with automated quality scoring, processing 1K+ reports per batch — an early example of the generate-then-evaluate loop central to modern agent development.
+            \item Built and evaluated NLP and GNN-based ML models in Python (PyTorch, Scikit-learn) to extract, classify, and rank cyber-threat events from from 1M+ unstructured records with $\sim$88\% F1 score and $\sim$85\% ROC-AUC — designed data pipelines using NLTK, spaCy, and Apache Spark, tracked metrics.
+            
+            \item Developed GNN models to predict HPC job execution status from cluster telemetry logs, achieving $\sim$89\% classification accuracy through systematic model selection and cross-validation across $\sim$500K job records.
         \end{highlights}
     \end{onecolentry}
 
@@ -322,7 +324,7 @@
 
         \paragraph{LLM \& Agentic Development:} LangChain, LlamaIndex, Hugging Face Transformers, Azure OpenAI, function/tool calling, structured outputs, context management, MCP tools integration
         \vspace{-4mm}
-        \paragraph{Evaluation \& Observability:} RAGAs, DeepEval, MLflow, automated eval harnesses, regression testing, session tracing, automated scoring, trace→eval→fix workflows
+        \paragraph{Evaluation \& Observability:} RAGAs, DeepEval, MLflow, regression testing, session tracing, trace→eval→fix workflows
         \vspace{-4mm}
         \paragraph{Fine-tuning \& Optimization:} LoRA, QLoRA, PEFT, SFT pipelines, quantization (INT8, dynamic), distillation, prompt tuning
         \vspace{-4mm}
