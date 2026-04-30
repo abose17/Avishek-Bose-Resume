@@ -200,16 +200,16 @@
     \begin{twocolentry}{Jun 2025 -- Present}
         \textbf{Platform Engineer}
     \end{twocolentry}
-    \begin{twocolentry}{Knoxville, TN, USA}
+    \begin{twocolentry}{Knoxville, Tennessee, USA}
        Tegna Inc.
     \end{twocolentry}
 
     \begin{onecolentry}
         \begin{highlights}
             \item Designed and deployed containerized AI service platform serving 100K+ daily requests on Azure — built model serving APIs with automated CI/CD pipelines, health monitoring, versioned artifact management, and zero-downtime deployment workflows.
-            \item Applied INT8 quantization and dynamic batching to Transformer inference pipelines, reducing per-request latency from $\sim$250ms to $\sim$90ms — a direct instance of inference system optimization for high-throughput serving.
+            \item Designed and implemented vector search and embedding generation pipelines using dense similarity retrieval, improving retrieval precision by $\sim$35\% across 5+ production indexes.
             \item Built automated model evaluation and regression testing workflows integrated into CI/CD gates, ensuring quality regressions were caught before each production deployment.
-            \item Maintained infrastructure-as-code using Terraform and Docker for reproducible, scalable ML service deployment across environments.
+            \item Maintained infrastructure-as-code using Terraform and Docker for reproducible, scalable ML service deployment.
         \end{highlights}
     \end{onecolentry}
 
@@ -219,14 +219,15 @@
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
     \begin{twocolentry}{Oak Ridge, Tennessee, USA}
-        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+        Critical Infrastructure Resilience group, Oak Ridge National Laboratory (ORNL)
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
             \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) — designed multi-node distributed training configuration, managed data preprocessing pipelines across 2M+ scientific documents, and developed task-specific evaluation workflows to validate model outputs at scale.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, outperforming by F1 25\%.
             \item Built and deployed ML inference services on Azure for DOE and ORNL scientific workflows — containerized serving APIs with $<$100ms response time, 24$\times$7 availability, and documented operational procedures for research users.
-            \item Developed modular Python ML pipelines with version-controlled workflows and systematic testing for large-scale scientific document analysis and knowledge retrieval across 50K+ DOE records.
+            \item Developed modular ML pipelines with version-controlled workflows and systematic testing for large-scale scientific knowledge retrieval across 50K+ DOE incident reports.
         \end{highlights}
     \end{onecolentry}
 
@@ -241,8 +242,8 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed GNN-based models to predict HPC job execution status and resource utilization from cluster telemetry ($\sim$500K records, $\sim$89\% accuracy) — built deep familiarity with HPC workload patterns, scheduling dynamics, and performance characteristics.
-            \item Built modular Python ML pipelines with systematic testing, version control, and automated evaluation to process 10M+ unstructured records — applying software engineering best practices to research-grade ML development.
+            \item Built and evaluated NLP and GNN-based ML models in Python (PyTorch, Scikit-learn) to extract, classify, and rank cyber-threat events from 100k+ unstructured records with $\sim$88\% F1 score and $\sim$85\% ROC-AUC — designed data pipelines using NLTK, spaCy, and Apache Spark, tracked metrics.
+            \item Developed GNN-based models to predict HPC job execution status and resource utilization from cluster telemetry ($\sim$500K records, $\sim$89\% accuracy) — with HPC workload patterns, scheduling dynamics, and performance characteristics.
         \end{highlights}
     \end{onecolentry}
 
@@ -324,9 +325,9 @@
         \vspace{-4mm}
         \paragraph{AI/ML Frameworks:} PyTorch, Hugging Face Transformers, Scikit-learn, PyTorch Geometric (GNNs)
         \vspace{-4mm}
-        \paragraph{Model Serving \& Optimization:} LLM inference pipelines, quantization (INT8, dynamic), distillation, batched inference, MLflow model registry
+        \paragraph{Model Serving \& Optimization:} LLM inference pipelines, quantization (INT8), distillation, batched inference, MLflow
         \vspace{-4mm}
-        \paragraph{Infrastructure \& MLOps:} Docker, Terraform (IaC), CI/CD, Azure, automated testing and regression workflows, service observability, Git
+        \paragraph{Infrastructure \& MLOps:} Docker, Terraform, CI/CD, Azure, automated testing, regression workflows, Git
         \vspace{-4mm}
         \paragraph{HPC \& Large-scale Computing:} Multi-node distributed training (Frontier Exascale, GPU clusters), HPC workload analysis, scientific data pipelines
 
