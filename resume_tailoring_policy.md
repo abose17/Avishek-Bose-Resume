@@ -109,6 +109,18 @@ If the answer is no for any part of the bullet, remove or rewrite that part — 
 
 ---
 
+## Skills Match Table — Hard Rules
+
+**Only include a term in the Skills Match table if it appears verbatim (or near-verbatim) in the JD.** Do not invent qualifiers, sub-categories, or paraphrased versions of JD terms to manufacture a match.
+
+- **Exact match**: The term appears word-for-word (or near-verbatim) in the JD — e.g. JD says "RAG", table says "RAG". Do not add parenthetical qualifiers that aren't in the JD (e.g. do not write "Deep Learning (graph-based)" if the JD only says "Deep Learning").
+- **Relevant match**: The JD names a concept that Avishek covers with a closely related confirmed skill. The mapping must be direct and obvious — not a stretch. If you have to invent an intermediate qualifier to make it fit, it is not a relevant match.
+- **Gap**: If a JD term has no honest exact or relevant match in Avishek's confirmed background, record it as a gap. Do not force it into either match tier.
+- **Do not add rows to pad the table.** If a skill is already covered under another row (e.g. GNN work already captured under "Deep Learning"), do not create a second row for it with a fabricated JD term.
+- Maximum 20 rows. Fewer rows with accurate mappings is better than 20 rows with inflated ones.
+
+---
+
 ## Page Length
 - Resume must fit exactly one page
 - Target: no more than ~55-60 lines of body text across all sections
