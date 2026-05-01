@@ -37,6 +37,22 @@
 - Use domain-specific terminology only when matched to the JD **and** grounded in Avishek's actual background
 - **Avishek always does a final edit in Overleaf before submitting** — the goal is to produce a strong first draft that makes his editing job easier, not a perfect final product
 
+## No Keyword Stuffing — Hard Rule
+**Never write a sentence whose sole purpose is to place a JD keyword in the resume.** This applies even if the sentence is grammatically correct and sounds plausible.
+
+A bullet is only acceptable if every technical claim in it traces directly back to `main_original.tex` or the confirmed Key Facts table. The test is:
+
+> *Can I point to a specific line in `main_original.tex` or the Key Facts that justifies each tool, action, and outcome named in this bullet?*
+
+If the answer is no for any part of the bullet, remove or rewrite that part — do not soften it into vague language to make it fit.
+
+**Specific patterns to reject:**
+- Copying JD requirement language and recasting it as an accomplishment (e.g. JD says "secrets management and least-privilege access" → bullet says "applied secrets management and least-privilege access" without any confirmation that Avishek did this)
+- Adding a tool or concept from the JD that has no grounding in the master resume (e.g. "LLM gateways", "model routing", "co-instructed" when only "co-designed" is confirmed)
+- Paraphrasing the JD's own value statements into the summary as if they describe Avishek's work (e.g. "scoping solutions, prototyping rapidly, and transferring skills for independent operation")
+
+**If a JD keyword has no real match, record it as a gap in the Skills Match table — do not insert it into the resume to create the appearance of a match.**
+
 ---
 
 ## Quantitative Measures — Mandatory
