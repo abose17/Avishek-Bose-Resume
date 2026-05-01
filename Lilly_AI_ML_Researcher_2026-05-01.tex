@@ -196,6 +196,7 @@
         \begin{highlights}
             \item Designed and deployed a large-scale RAG platform on Azure serving 100K+ daily production requests, integrating semantic search, summarization, and LLM-based recommendation workflows.
             \item Established automated evaluation pipelines using RAGAs and DeepEval to continuously monitor retrieval precision and generation quality across 5+ production models.
+            \item Designed cloud-native ML inference infrastructure on Azure supporting 24$\times$7 scientific workloads with $<$100ms response time and 99.9\%+ availability.
         \end{highlights}
     \end{onecolentry}
 
@@ -205,15 +206,16 @@
         \textbf{Postdoctoral Research Associate}
     \end{twocolentry}
     \begin{twocolentry}{Oak Ridge, TN, USA}
-        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+        Critical Infrastructure Resilience group, Oak Ridge National Laboratory (ORNL)
     \end{twocolentry}
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Applied GNN and Transformer-based architectures to drug toxicology prediction and materials property inference, translating graph-structured molecular representations into classification and regression tasks.
-            \item Co-developed MatGPT, a scientific foundation model pretrained on 2M+ materials science documents using Frontier (world's first Exascale supercomputer), demonstrating scalable pretraining on domain-specific scientific corpora.
-            \item Built LLM fine-tuning pipelines using LoRA for domain adaptation across 50K+ DOE/ORNL reports, achieving $\sim$15\% accuracy improvement over zero-shot baselines.
-            \item Designed cloud-native ML inference infrastructure on Azure supporting 24$\times$7 scientific workloads with $<$100ms response time and 99.9\%+ availability.
+
+            \item Predicted thousands of drug toxicities on highly imbalanced, asymmetric multi-label data using a novel graph neural networks (GNNs), recurrent neural networks (RNNs), and Transformers on data size of 10M+ documents from NIEHS and DOE, outperforming SOTA by 25\%.
+            \item Reverse engineered drug toxicity prediction and associated latent learnt representation to predict drug molecular properties using SHAP, and GNN explainer, property prediction was up to 90\% accurate.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 2M+ scientific documents of material science, designing distributed training configurations and evaluation protocols to predict quantum physical properties  of SoFC materials at scale.
+            \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) and build an incident forecasting module with agentic AI-based RAG pipelines on 50K+ DOE and ORNL incident reports using LLamaIndex and LangChain, achieving $\sim$15\% improvement in F1 score.
         \end{highlights}
     \end{onecolentry}
 
@@ -228,9 +230,8 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
+            \item Built and evaluated GNN and NLP-based ML models in Python (PyTorch, Scikit-learn) to extract, classify, and rank cyber-threat events from from 1M+ unstructured records with $\sim$88\% F1 score and $\sim$85\% ROC-AUC — designed data pipelines using NLTK, spaCy, and Apache Spark, tracked metrics.
             \item Developed GNN-based models achieving $\sim$89\% accuracy for predicting HPC job execution status and resource requirements from structured cluster logs.
-            \item Built NLP and graph-based systems to classify and extract cyber-threat intelligence events from 10M+ social media posts.
-            \item Designed abstractive summarization pipelines for disaster situational reports, processing 1K+ reports per batch using generative sequence-to-sequence models.
         \end{highlights}
     \end{onecolentry}
 
@@ -244,13 +245,9 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed backend data processing and reporting systems handling 100K+ daily banking transactions using SQL and enterprise software platforms.
+            \item Developed backend data processing and reporting systems handling 200K+ daily banking transactions using SQL and enterprise software platforms.
         \end{highlights}
     \end{onecolentry}
-
-    \section{Publications}
-        3 journal and 22 conference papers in IPDPS, BigData, ICMLA, ISI \\
-        \hrefWithoutArrow{https://scholar.google.com/citations?user=y5ndUuMAAAAJ\&hl=en\&oi=ao}{Google Scholar: scholar.google.com/citations?user=y5ndUuMAAAAJ}
 
 \section{Education}
 
