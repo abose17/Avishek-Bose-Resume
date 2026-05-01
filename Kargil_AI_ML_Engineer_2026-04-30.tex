@@ -193,10 +193,10 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Implemented CI/CD release pipelines with automated evaluation gates and controlled environment promotion for GenAI services serving 100K+ daily requests, using Docker for containerization and Terraform for infrastructure-as-code on Azure.
-            \item Architected a multi-model RAG platform integrating LLM gateways, vector databases, and embedding-based retrieval with hybrid search strategies, achieving $\sim$35\% retrieval precision improvement over keyword search for newsroom content discovery.
-            \item Established AI observability and evaluation pipelines using RAGAs and DeepEval to continuously monitor 5+ production models across retrieval, reranking, and generation stages, enabling automated quality gates prior to promotion.
-            \item Applied secure-by-default practices to all production AI services including access controls, secrets management, and input/output guardrails to mitigate prompt injection and data leakage risks.
+            \item Designed and deployed production ready AI/ML systems serving 100K+ daily requests on Azure — integrated transformer-based classification and retrieval models with existing content platform APIs, ensuring scalability and robustness.
+            \item Designed and implemented vector search and embedding generation pipelines using dense similarity retrieval, improving retrieval precision by $\sim$35\%.
+            \item Established AI observability and evaluation pipelines using RAGAs and DeepEval to continuously monitor across 5+ production indexes, reranking, and generation stages, enabling automated quality assessment prior to promotion.
+            \item Collaborated with cross-functional engineering and product teams to integrate AI features into existing systems, managing deployment via Docker, Terraform, and CI/CD pipelines.
         \end{highlights}
     \end{onecolentry}
 
@@ -211,9 +211,12 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Deployed containerized LLM inference services on Azure with $<$100ms response time on warm instances, maintaining 99.9\%+ uptime SLA across a knowledge base of 50K+ DOE operational incident reports.
-            \item Applied LoRA fine-tuning to BERT and LLaMA-class models for domain-adapted NLP classification, achieving $\sim$15\% accuracy improvement over zero-shot baselines on ORNL-specific datasets.
-            \item Trained MatGPT on Frontier (world's first Exascale supercomputer) using a 2M+ materials science document corpus for large-scale semantic retrieval and knowledge extraction.
+
+        \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) using LoRA on 50K+ DOE and ORNL incident reports, achieving $\sim$15\% improvement in domain-specific classification F1 over zero-shot baselines.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 1M+ scientific documents of material science, designing distributed training configurations and evaluation protocols to advance material research at scale.
+            \item Applied GNNs to graph-structured infrastructure resilience data for multi-class failure prediction, outperforming by F1 25\%.
+            \item Deployed containerized ML inference services on Azure with $<$100ms response time and 99.9\%+ availability for incident forecast system, integrating model outputs into downstream workflows via API.
+            
         \end{highlights}
     \end{onecolentry}
 
@@ -230,7 +233,7 @@
         \begin{highlights}
             \item Built NLP and graph-based ML pipelines to extract and classify cyber-threat events from 10M+ social media posts, producing structured intelligence feeds for downstream security analysis.
             \item Developed GNN-based models predicting HPC job execution status and resource requirements from cluster logs, achieving $\sim$89\% classification accuracy to improve system planning and reliability.
-            \item Designed an automated abstractive summarization pipeline processing 1K+ disaster reports per batch using generative NLP models, reducing manual triage time for emergency response teams.
+            \item Designed an automated abstractive summarization pipeline processing 100K+ disaster reports using generative NLP models, reducing manual triage time for emergency response teams.
         \end{highlights}
     \end{onecolentry}
 
@@ -244,7 +247,7 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed backend data processing and reporting systems in SQL handling 100K+ daily banking transactions.
+            \item Developed backend data processing and reporting systems in SQL handling 1M+ daily banking transactions.
         \end{highlights}
     \end{onecolentry}
 
