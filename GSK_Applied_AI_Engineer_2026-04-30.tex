@@ -179,7 +179,7 @@
 
     \vspace{- 0.3 cm}
     \section{Summary}
-    Applied AI Engineer and PhD in Computer Science with 8+ years building and deploying ML systems across scientific and enterprise domains. Author of 25 peer-reviewed publications (IPDPS, IEEE BigData, ICMLA, ISI) in NLP, graph ML, and applied AI. Hands-on experience with LLM-based tools, RAG platforms, and agentic AI pipelines in production, with research spanning drug toxicology prediction, HPC systems, and large-scale text mining.
+    Applied AI Engineer and PhD in Computer Science with 8+ years building and deploying ML systems across scientific and enterprise domains. Author of 25 peer-reviewed publications (IPDPS, IEEE BigData, ICMLA, ISI) in NLP, graph ML, and applied AI. Hands-on experience with LLM-based tools, RAG platforms, and agentic AI pipelines in production, with research spanning drug toxicology prediction, computational chemistry, HPC systems, and large-scale text mining.
 
     \vspace{-1mm}
     \section{Work Experience}
@@ -194,8 +194,8 @@
     \begin{onecolentry}
         \begin{highlights}
             \item Designed and deployed a multi-model RAG platform using Azure Functions, vector databases, and self-hosted LLMs for newsroom content discovery, serving 100K+ daily production requests across semantic search, summarization, and recommendation workflows.
-            \item Built and maintained cloud-native infrastructure on Azure using Docker for containerization and Terraform for infrastructure-as-code, with CI/CD pipelines ensuring reliable and repeatable GenAI service deployments.
-            \item Established automated model evaluation pipelines using RAGAs and DeepEval to continuously monitor 5+ production models across retrieval, reranking, and generation stages.
+            \item Conducted systematic model evaluation experiments using RAGAs and DeepEval, tracking performance across model versions and iterating on architecture to improve retrieval precision by $\sim$35\%.
+            \item Collaborated with cross-functional engineering and product teams to integrate AI features into existing systems, managing deployment via Docker, Terraform, and CI/CD pipelines.
         \end{highlights}
     \end{onecolentry}
 
@@ -210,9 +210,11 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Applied Transformers, GNNs, and NLP techniques to drug toxicology prediction and infrastructure resilience analysis using large-scale DOE and ORNL datasets.
-            \item Fine-tuned BERT and LLaMA-class models using LoRA for domain-adapted NLP classification on a 50K+ DOE operational incident report corpus, achieving $\sim$15\% accuracy improvement over zero-shot baselines.
-            \item Designed scalable ML pipelines integrating embeddings and vector databases, with containerized LLM inference services deployed on Azure at $<$100ms response time and 99.9\%+ uptime.
+            \item Predict thousands of drug toxicities on highly imbalanced, asymmetric multi-label data using a novel graph neural networks (GNNs), recurrent neural networks (RNNs), and Transformers on data size of 10M+ documents from NIEHS and DOE, outperming SOTA by 25\%.
+            \item Reverse engineered drug toxicity prediction and associated latent learnt representation to predict drug molecular properties using SHAP, and GNN explainer, property prediction was up to 90\% accurate.
+            \item Trained MatGPT on Frontier (world’s first Exascale supercomputer) across 1M+ scientific documents of material science, designing distributed training configurations and evaluation protocols to advance material research at scale.
+            \item Fine-tuned Transformer classification models (BERT, LLaMA, GPT) and build a incident forecasting module with agentic AI  based RAG pipelines on 50K+ DOE and ORNL incident reports using LLamaIndex and LangChain, achieving $\sim$15\% improvement in F1 score.
+            
         \end{highlights}
     \end{onecolentry}
 
@@ -227,9 +229,8 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built and evaluated NLP and GNN-based ML systems for cyber-threat event classification from 10M+ social media posts and HPC job prediction at $\sim$89\% accuracy, contributing to 25 peer-reviewed publications in NLP and graph ML.
-            \item Co-designed a graduate-level AI/ML course at Kansas State University.
-            \item Designed an automated abstractive summarization pipeline processing 1K+ disaster-related reports per batch using generative NLP models.
+            \item Built and evaluated NLP and GNN-based ML models in Python (PyTorch, Scikit-learn) to extract, classify, and rank cyber-threat events from from 1M+ unstructured records with $\sim$88\% F1 score and $\sim$85\% ROC-AUC — designed data pipelines using NLTK, spaCy, and Apache Spark, tracked metrics.
+            \item Developed GNN models to predict HPC job execution status from cluster telemetry logs, achieving $\sim$89\% classification accuracy through systematic model selection and cross-validation across $\sim$500K job records.
         \end{highlights}
     \end{onecolentry}
 
@@ -243,7 +244,7 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Developed backend data processing and reporting systems in SQL handling 100K+ daily banking transactions.
+            \item Developed backend data processing and reporting systems in SQL handling 500K+ daily banking transactions.
         \end{highlights}
     \end{onecolentry}
 
