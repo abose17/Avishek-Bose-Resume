@@ -3,7 +3,7 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=1 cm, % seperation between body and page edge from the top
+    top=1.5 cm, % seperation between body and page edge from the top
     bottom=1 cm, % seperation between body and page edge from the bottom
     left=1 cm, % seperation between body and page edge from the left
     right=1 cm, % seperation between body and page edge from the right
@@ -193,9 +193,9 @@
 
     \begin{onecolentry}
         \begin{highlights}
-            \item Designed and deployed a production RAG platform using LlamaIndex, Azure Functions, and vector databases, processing 100K+ daily requests for newsroom content discovery.
-            \item Built agentic LLM workflows with multi-step reasoning, tool-use patterns, and MCP server integrations to automate content retrieval, summarization, and recommendation pipelines.
-            \item Established automated LLM evaluation pipelines using RAGAs and DeepEval, monitoring 5+ production models and improving semantic retrieval precision by $\sim$35\% over keyword-based baselines.
+            \item Designed and deployed a production RAG platform using Azure Functions, LlamaIndex, and self-hosted LLMs, processing 100K+ daily requests for newsroom content discovery.
+            \item Built agentic LLM workflows with MCP server integrations to improve content generation by $\sim$35\% over keyword-based baselines by integrating LLM-powered dense semantic search and multi-stage summarization workflows.
+            \item Established automated LLM evaluation pipelines using RAGAs and DeepEval, monitoring 5+ production metrics and improving semantic retrieval precision by $\sim$35\% over keyword-based baselines.
             \item Containerized and deployed 5+ production LLM services on Azure using Docker and Terraform, enabling scalable, reproducible delivery of GenAI features across environments.
         \end{highlights}
     \end{onecolentry}
@@ -228,8 +228,9 @@
     \vspace{0.10 cm}
     \begin{onecolentry}
         \begin{highlights}
-            \item Built NLP and graph-based ML pipelines to extract and classify cyber-threat events from 10M+ social media posts, evaluating models across multiple deep learning architectures.
-            \item Developed GNN-based models for HPC job outcome prediction from cluster logs, achieving $\sim$89\% classification accuracy; designed abstractive summarization pipelines processing 1K+ disaster reports per batch.
+            \item Built NLP and graph-based ML pipelines to extract and classify cyber-threat events from 1M+ social media posts, evaluating models across multiple deep learning architectures.
+            \item Developed GNN-based models for HPC job outcome prediction from cluster logs, achieving $\sim$89\% classification accuracy; designed abstractive summarization pipelines processing 80K+ disaster reports per batch.
+            \item Built a T5-based generative summarization method on natural disaster report from FEMA; reduced processing time by $\sim$30\%.
         \end{highlights}
     \end{onecolentry}
 
