@@ -1,0 +1,285 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1 cm, % seperation between body and page edge from the top
+    bottom=1 cm, % seperation between body and page edge from the bottom
+    left=1 cm, % seperation between body and page edge from the left
+    right=1 cm, % seperation between body and page edge from the right
+    footskip=1 cm, % seperation between body and footer
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={John Doe's CV},
+    pdfauthor={John Doe},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Avishek Bose \\
+        \fontsize{10 pt}{10 pt}\selectfont Data Scientist (AI)
+
+        \normalsize
+        Location: Knoxville, TN, United States | Immigration status: Permanent resident (US)
+        \\
+        \mbox{\hrefWithoutArrow{mailto:avishek85.15th@gmail.com}{avishek85.15th@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{+1(785)317-6675}{(785)317-6675}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/avibose}{linkedin.com/in/avibose}}%
+    \end{header}
+
+    \vspace{- 0.3 cm}
+    \section{Summary}
+    Applied AI researcher and engineer with 8+ years of experience designing, fine-tuning, and evaluating LLMs, RAG pipelines, and generative AI systems at enterprise scale. Experienced across the full model lifecycle --- data curation, experimentation, evaluation, and production deployment. Author of 25 peer-reviewed papers (IPDPS, IEEE BigData, ICMLA, ISI); co-designed a graduate-level AI/ML course at Kansas State University.
+
+    \vspace{-1mm}
+    \section{Work Experience}
+
+    \begin{twocolentry}{Jun 2025 -- Present}
+        \textbf{Platform Engineer}
+    \end{twocolentry}
+    \begin{twocolentry}{Knoxville, TN, USA}
+       Tegna Inc.
+    \end{twocolentry}
+
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Designed and deployed a production RAG platform using Azure Functions, vector databases, and self-hosted LLMs, serving 100K+ daily content discovery requests for newsroom teams.
+            \item Developed hybrid search workflows combining dense semantic retrieval with keyword-based ranking, improving content retrieval precision by $\sim$35\% over keyword-only baselines.
+            \item Established automated model evaluation pipelines using RAGAs and DeepEval, benchmarking 5+ production RAG components across retrieval accuracy, generation quality, and latency dimensions.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{1mm}
+
+    \begin{twocolentry}{Jan 2023 -- Jun 2025}
+        \textbf{Postdoctoral Research Associate}
+    \end{twocolentry}
+    \begin{twocolentry}{Oak Ridge, TN, USA}
+        Critical Infrastructure Resilience group, Geospatial Science and Human Security Division, Oak Ridge National Laboratory (ORNL)
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed LLM-based NLP systems for enterprise knowledge retrieval and incident classification across 50K+ DOE/ORNL safety reports, enabling structured analysis at scale.
+            \item Fine-tuned Transformer models (BERT, LLaMA) using LoRA for domain-specific classification, achieving $\sim$15\% accuracy improvement with inference latency under 100ms on Azure.
+            \item Trained MatGPT on Frontier --- the world's first Exascale supercomputer --- for materials science knowledge extraction and semantic retrieval over 2M+ scientific documents.
+            \item Designed scalable ML pipelines integrating embeddings, vector databases, and Azure-hosted endpoints, maintaining 99.9\%+ availability for enterprise AI services.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{1mm}
+
+    \begin{twocolentry}{Jun 2018 -- Dec 2022}
+        \textbf{Research Assistant}
+    \end{twocolentry}
+    \begin{twocolentry}{Manhattan, Kansas, USA}
+       KDD Lab, Department of Computer Science, Kansas State University
+    \end{twocolentry}
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built and evaluated NLP and graph-based ML models to extract, classify, and rank cyber-threat events from 10M+ social media posts, supporting real-time intelligence analysis.
+            \item Developed GNN-based models to predict HPC job execution outcomes from cluster logs, achieving $\sim$89\% classification accuracy to support system-level resource planning.
+            \item Designed an abstractive summarization pipeline using generative sequence models to process 1K+ disaster incident reports per batch, producing structured situational summaries.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.1 cm}
+    \begin{twocolentry}{Jan 2015 -- Dec 2016}
+        \textbf{Software Engineer}
+    \end{twocolentry}
+    \begin{twocolentry}{Dhaka, Bangladesh}
+       ICT Division, Dutch Bangla Bank
+    \end{twocolentry}
+
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed backend data processing and reporting systems handling 100K+ daily banking transactions using SQL and enterprise software platforms.
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Publications}
+        \begin{onecolentry}
+            3 journal articles and 22 peer-reviewed conference papers (IPDPS, IEEE BigData, ICMLA, ISI). \hrefWithoutArrow{https://scholar.google.com/citations?user=y5ndUuMAAAAJ\&hl=en\&oi=ao}{Google Scholar}
+        \end{onecolentry}
+
+\section{Education}
+
+        \begin{twocolentry}{
+            August 2017 -- Dec 2022
+        }
+            \textbf{Kansas State University}, Ph.D. in Computer Science\end{twocolentry}
+
+        \begin{twocolentry}{
+            January 2014 -- Dec 2015
+        }
+            \textbf{University of Dhaka}, M.S. in Computer Science and Engineering\end{twocolentry}
+
+        \begin{twocolentry}{
+            January 2009 -- Aug 2013
+        }
+            \textbf{University of Dhaka}, B.Sc. in Computer Science and Engineering\end{twocolentry}
+
+\vspace{-1mm}
+\section{Technical Skills}
+
+        \paragraph{AI/ML frameworks and tools:} PyTorch, LangChain, LlamaIndex, Hugging Face, Scikit-learn, MLflow, PyTorch Geometric
+        \vspace{-4mm}
+        \paragraph{AI/ML:} LLM fine-tuning, Retrieval-Augmented Generation (RAG), Vector databases, Hybrid search, Agentic AI pipelines, Prompt tuning, Distillation, Quantization, Graph Neural Networks
+        \vspace{-4mm}
+        \paragraph{Cloud \& Infrastructure:} Azure, Docker, Terraform
+        \vspace{-4mm}
+        \paragraph{Programming Languages:} Python, C\#, C
+
+
+\end{document}
